@@ -105,7 +105,7 @@ RCT_EXPORT_METHOD(setStyle:(UIStatusBarStyle)statusBarStyle
                   animated:(BOOL)animated)
 {
   if (RCTViewControllerBasedStatusBarAppearance()) {
-    RCTLogError(@"RCTStatusBarManager module requires that the \
+    RCTLogWarn(@"RCTStatusBarManager module requires that the \
                 UIViewControllerBasedStatusBarAppearance key in the Info.plist is set to NO");
   } else {
 #pragma clang diagnostic push
@@ -120,7 +120,7 @@ RCT_EXPORT_METHOD(setHidden:(BOOL)hidden
                   withAnimation:(UIStatusBarAnimation)animation)
 {
   if (RCTViewControllerBasedStatusBarAppearance()) {
-    RCTLogError(@"RCTStatusBarManager module requires that the \
+    RCTLogWarn(@"RCTStatusBarManager module requires that the \
                 UIViewControllerBasedStatusBarAppearance key in the Info.plist is set to NO");
   } else {
 #pragma clang diagnostic push
